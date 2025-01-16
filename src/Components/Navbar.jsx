@@ -3,6 +3,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 // import Cart from '../pages/Cart';
 import { useSelector } from 'react-redux';
+import logo from '../assets/logo.png'
 
 
 function Navbar() {
@@ -13,7 +14,7 @@ function Navbar() {
             <nav className=' flex justify-between items-center h-20 max-w-6xl mx-auto'>
                 <NavLink to='/'>
                     <div className="ml-5">
-                        <img className='h-14' src="../assets/logo.png" alt="" />
+                        <img className='h-14' src={logo} alt="" />
                     </div>
                 </NavLink>
                 <div className="flex items-center font-medium text-slate-100 mr-5 space-x-6">
