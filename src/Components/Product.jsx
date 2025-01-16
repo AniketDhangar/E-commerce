@@ -22,18 +22,20 @@ function Product({ post }) {
 
     const removeFromCart = () => {
         dispatcher(remove(post.id))
-        toast.error("removed", {
+        toast.success("Removed",{
+      
+            icon:'❌',
             style: {
-                height:'50px',
-                borderRadius: '10px',
-                background: '#333',
-                color: '#fff',
-            },
-        })
+              overflow:'hidden',
+              borderRadius: '10px',
+              background: '#333',
+              color: '#fff',
+          },
+          })
     }
     return (
         <div  className='flex flex-col items-center justify-between
-         hover:scale-110 transition duration-400 ease-in gap-3 p-4 mt-10 ml-10  mr-10 rounded-lg  shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]
+         hover:scale-110 transition duration-400 ease-in gap-3 p-4 mt-10 ml-5  rounded-lg  shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)]
         '>
             <div>
                 <p className='text-gray-700 font-semibold text-lg text-left truncate w-40 mt-1  '>{post.title}</p>

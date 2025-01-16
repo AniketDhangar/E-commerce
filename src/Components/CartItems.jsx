@@ -10,7 +10,16 @@ function CartItems({ item, itemIndex }) {
 
   const removeFromCart = () => {
     dispatcher(remove(item.id))
-    toast.error("item is removed")
+    toast.success("Removed",{
+      
+      icon:'❌',
+      style: {
+        overflow:'hidden',
+        borderRadius: '10px',
+        background: '#333',
+        color: '#fff',
+    },
+    })
   }
   return (
     <div className="flex flex-col w-[450px] mt-6  justify-center items-center gap-16  border-b-4 border-gray-700 overflow-y-hidden ">
